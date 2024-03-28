@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     private Rigidbody2D _rb2d;
 
     [SerializeField] public Vector2 Direction { get; set; }
+    [field : SerializeField] public float Dammage { get; private set; }
 
     private void Awake()
     {
