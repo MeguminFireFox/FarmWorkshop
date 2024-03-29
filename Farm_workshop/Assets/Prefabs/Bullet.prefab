@@ -172,4 +172,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  _rb2d: {fileID: 8893127870799244095}
   <Dammage>k__BackingField: 1

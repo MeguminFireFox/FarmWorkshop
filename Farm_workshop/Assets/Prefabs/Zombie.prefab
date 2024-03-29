@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7441172634050369573}
   - component: {fileID: 3941159997288193962}
   - component: {fileID: 3174735812650465266}
-  - component: {fileID: 591397649405080932}
+  - component: {fileID: 281787589421452318}
   - component: {fileID: 501243601438221101}
   m_Layer: 0
   m_Name: Zombie
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Color: {r: 0.25898895, g: 0.4245283, b: 0.26121676, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -114,8 +114,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &591397649405080932
-BoxCollider2D:
+--- !u!58 &281787589421452318
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -147,18 +147,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
-    newSize: {x: 1, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!114 &501243601438221101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,3 +163,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Joueur: {fileID: 0}
   _bullet: {fileID: 4325201925669717136, guid: a49bbc307d5fcd141a133dfe3767decf, type: 3}
+  _hPPplayer: {fileID: -404752911615681547, guid: 8d48c828c6184d743b3f6e710e411b83, type: 3}

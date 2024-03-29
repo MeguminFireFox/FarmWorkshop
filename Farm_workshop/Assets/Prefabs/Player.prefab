@@ -154,8 +154,9 @@ GameObject:
   - component: {fileID: 7227659682713435574}
   - component: {fileID: 573385363158340075}
   - component: {fileID: 750955278213032524}
+  - component: {fileID: -404752911615681547}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +218,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -316,11 +317,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882dfda21993ee64ea4b7151910fb130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plant: {fileID: 4202647128760863286, guid: 6707f34680404b9429737efb6d30b491, type: 3}
-  _plant2: {fileID: 4202647128760863286, guid: a2f920967a7810e4da3ac17e07d4072c, type: 3}
-  _plant3: {fileID: 4202647128760863286, guid: 74397b2b5152f4a40bf6f1b6e7ab61a0, type: 3}
-  _plant4: {fileID: 4202647128760863286, guid: 9b3c5418490cd6241ab9480d08587dbc, type: 3}
+  _plant1Prefab: {fileID: 4202647128760863286, guid: 6707f34680404b9429737efb6d30b491, type: 3}
+  _plant2Prefab: {fileID: 4202647128760863286, guid: a2f920967a7810e4da3ac17e07d4072c, type: 3}
+  _plant3Prefab: {fileID: 4202647128760863286, guid: 74397b2b5152f4a40bf6f1b6e7ab61a0, type: 3}
+  _plant4Prefab: {fileID: 4202647128760863286, guid: 9b3c5418490cd6241ab9480d08587dbc, type: 3}
   _dayNight: {fileID: 0}
+  _hotbar: {fileID: 573385363158340075}
+  _inventory: {fileID: 7227659682713435574}
 --- !u!114 &7227659682713435574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,5 +367,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9809ff7ba4474845a8c5c6cf3345825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 1598566709010337918, guid: a49bbc307d5fcd141a133dfe3767decf, type: 3}
+  _bulletPrefab: {fileID: 1598566709010337918, guid: a49bbc307d5fcd141a133dfe3767decf, type: 3}
   _dayNight: {fileID: 0}
+--- !u!114 &-404752911615681547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8654951065941984763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac95a980529194c409d9284699aa722d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <HP>k__BackingField: 5

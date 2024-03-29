@@ -1,18 +1,29 @@
 using UnityEngine;
 
+/// <summary>
+/// Permet au prefab balle d'aller en direction de la souris.
+/// </summary>
 public class Bullet : MonoBehaviour
 {
+    /// <summary>
+    /// On crée un float pour indiquer la vitesse de déplacement de la balle. 
+    /// </summary>
     [SerializeField] private float _speed;
     
-    private Rigidbody2D _rb2d;
+    /// <summary>
+    /// On récupère le rigidbody2D de la balle pour pouvoir la propulser.
+    /// </summary>
+    [SerializeField] private Rigidbody2D _rb2d;
 
+    /// <summary>
+    /// On crée un Vector2 pour connaitre la direction dans laquel la balle va partir.
+    /// </summary>
     [SerializeField] public Vector2 Direction { get; set; }
-    [field : SerializeField] public float Dammage { get; private set; }
 
-    private void Awake()
-    {
-        _rb2d = GetComponent<Rigidbody2D>();
-    }
+    /// <summary>
+    /// On crée un float pour mettre les dégat que fait la balle.
+    /// </summary>
+    [field : SerializeField] public float Dammage { get; private set; }
 
     void Start()
     {
@@ -26,6 +37,9 @@ public class Bullet : MonoBehaviour
         _rb2d.velocity = Direction * _speed;
     }
 
+    /// <summary>
+    /// Détruit le gameObject.
+    /// </summary>
     private void AutoDestroy()
     {
         Destroy(gameObject);

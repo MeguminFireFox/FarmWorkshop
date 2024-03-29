@@ -1,21 +1,16 @@
 using UnityEngine;
 
 /// <summary>
-/// Ouvre le menu du Shop et empêche de planter sur la zone du shop.
+/// Empêche de planter sur la zone du shop.
 /// </summary>
-public class Shop : MonoBehaviour
+public class Wall : MonoBehaviour
 {
-    /// <summary>
-    /// On récupère un panel pour pouvoir l'activer.
-    /// </summary>
-    [SerializeField] private GameObject _panelShop;
-
     /// <summary>
     /// On récupère le script Inventory pour pouboir remettre dans l'inventaire la grain mise sur le shop.
     /// </summary>
     [SerializeField] private Inventory _inventory;
 
-    void OnTriggerStay2D(Collider2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Plant")
         {
@@ -36,15 +31,6 @@ public class Shop : MonoBehaviour
         {
             _inventory.NumberSeed4 += 1;
             Destroy(collision.gameObject);
-        }
-
-        if (collision.gameObject.tag == "Player")
-        {
-            if (Input.GetKey(KeyCode.E))
-            {
-                Time.timeScale = 0;
-                _panelShop.SetActive(true);
-            }
         }
     }
 }

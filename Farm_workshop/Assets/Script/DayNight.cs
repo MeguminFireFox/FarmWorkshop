@@ -1,15 +1,44 @@
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// Permet d'activer et de gèrer le jour et la nuit.
+/// </summary>
 public class DayNight : MonoBehaviour
 {
-    
+    /// <summary>
+    /// On prend un textmesh pour afficher le temps qu'il reste avant le jour.
+    /// </summary>
     [SerializeField] private TMP_Text _timeText;
+
+    /// <summary>
+    /// On récupère un Panel pour l'activer ou le désactiver en fonction du jour et de la nuit.
+    /// </summary>
     [field : SerializeField] public GameObject _panelStart {  get; set; }
+
+    /// <summary>
+    /// On récupère un Panel pour l'activer ou le désactiver en fonction du jour et de la nuit.
+    /// </summary>
     [field : SerializeField] public GameObject _panelEnd {  get; set; }
+
+    /// <summary>
+    /// On fait un bool pour activer ou désactiver différentes chose dans différents script en fonction du jour ou de la nuit.
+    /// </summary>
     [field : SerializeField] public bool Hour { get; set; }
+
+    /// <summary>
+    /// On fait un bool pour activer ou désactiver différentes chose dans différents script en fonction du jour ou de la nuit.
+    /// </summary>
     [field: SerializeField] public bool Hour2 { get; set; }
+
+    /// <summary>
+    /// On crée un float qui va s'incrémanter avec le temps.
+    /// </summary>
     [SerializeField] public float CurrentTime { get; set; }
+
+    /// <summary>
+    /// On crée un float qui va s'incrémanter avec le temps.
+    /// </summary>
     [SerializeField] public float _wait { get; set; }
 
     void Start()
@@ -55,7 +84,7 @@ public class DayNight : MonoBehaviour
         {
             _wait += Time.deltaTime;
             
-            if (_wait >= 1) 
+            if (_wait >= 6) 
             {
                 CurrentTime = 1;
                 Hour2 = false;
