@@ -62,10 +62,10 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
-        _object = GameObject.Find("Square(Clone)");
-        _object2 = GameObject.Find("Square 1(Clone)");
-        _object3 = GameObject.Find("Square 2(Clone)");
-        _object4 = GameObject.Find("Square 3(Clone)");
+        _object = GameObject.Find("Plant1(Clone)");
+        _object2 = GameObject.Find("Plant2(Clone)");
+        _object3 = GameObject.Find("Plant3(Clone)");
+        _object4 = GameObject.Find("Plant4(Clone)");
 
         if (_dayNight.Hour2 == true)
         {

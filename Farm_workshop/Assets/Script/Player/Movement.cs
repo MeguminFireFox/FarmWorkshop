@@ -5,6 +5,9 @@ using UnityEngine;
 /// </summary>
 public class Movement : MonoBehaviour
 {
+    /// <summary>
+    /// Un float pour mettre la vitesse du joueur.
+    /// </summary>
     [SerializeField] private float _speed;
 
     void FixedUpdate()

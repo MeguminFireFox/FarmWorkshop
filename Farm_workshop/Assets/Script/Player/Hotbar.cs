@@ -1,7 +1,13 @@
 using UnityEngine;
 
+/// <summary>
+/// Permet de choisir entre les différentes graines.
+/// </summary>
 public class Hotbar : MonoBehaviour
 {
+    /// <summary>
+    /// Un int pour savoir sur quel touche on appuis.
+    /// </summary>
     [SerializeField] public int Choice {  get; private set; }
 
     void Update()

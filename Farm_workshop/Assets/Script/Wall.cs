@@ -10,7 +10,7 @@ public class Wall : MonoBehaviour
     /// </summary>
     [SerializeField] private Inventory _inventory;
 
-    void OnCollisionStay2D(Collision2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Plant")
         {

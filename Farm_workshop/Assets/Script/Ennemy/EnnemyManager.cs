@@ -15,7 +15,7 @@ public class EnnemyManager : MonoBehaviour
     /// </summary>
     [SerializeField] private DayNight _dayNight;
 
-    private float _currenttime = 0;
+    private float _currenttime = 15;
 
     void Update()
     {
@@ -24,7 +24,7 @@ public class EnnemyManager : MonoBehaviour
 
             _currenttime += Time.deltaTime;
 
-            if (_currenttime >= 20)
+            if (_currenttime >= 15)
             {
                 Instantiate(_zombiePrefab, transform.position, transform.rotation);
                 _currenttime = 0;

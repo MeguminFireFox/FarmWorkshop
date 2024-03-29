@@ -5,6 +5,9 @@ using UnityEngine;
 /// </summary>
 public class Back : MonoBehaviour
 {
+    /// <summary>
+    /// Un gameObject pour récupérer un panel et le désactiver.
+    /// </summary>
     [SerializeField] private GameObject panel;
 
     public void OnBack()
